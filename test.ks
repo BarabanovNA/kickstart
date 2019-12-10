@@ -143,6 +143,11 @@ systemctl disable bluetooth
 systemctl disable geoclue
 systemctl disable ModemManager
 sed -i 's/Disabled=false/Disabled=true/g' /etc/xdg/tumbler/tumbler.rc
+
+#docker
+sudo systemctl start docker
+sudo systemctl enable docker
+
 %end
 
 # Reboot After Installation
