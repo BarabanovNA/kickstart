@@ -147,7 +147,7 @@ sed -i 's/Disabled=false/Disabled=true/g' /etc/xdg/tumbler/tumbler.rc
 #docker
 sudo systemctl start docker
 sudo systemctl enable docker
-curl -o /usr/bin/containers.sh https://https://raw.githubusercontent.com/BarabanovNA/kickstart/master/containers.sh
+curl -o /usr/bin/containers.sh https://raw.githubusercontent.com/BarabanovNA/kickstart/master/containers.sh
 chmod +x /usr/bin/containers.sh
 curl -o /etc/systemd/system/containers.service https://raw.githubusercontent.com/BarabanovNA/kickstart/master/containers.service
 chmod 644 /etc/systemd/system/containers.service
