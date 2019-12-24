@@ -61,26 +61,26 @@ text
 @xfce-desktop
 vim
 NetworkManager-openvpn-gnome
-keepassx
+# keepassx
 redshift-gtk
 nmap
 tcpdump
 ansible
-vlc
+# vlc
 redhat-rpm-config
 rpmconf
 strace
-wireshark
-ffmpeg
-system-config-printer
+# wireshark
+# ffmpeg
+# system-config-printer
 git-review
 gcc-c++
 readline-devel
 python3-virtualenvwrapper
 usbmuxd
 ifuse
-exfat-utils
-fuse-exfat
+# exfat-utils
+# fuse-exfat
 jq
 icedtea-web
 docker
@@ -89,16 +89,16 @@ docker
 # Post-installation Script
 %post
 # Install Google Chrome
-cat << EOF > /etc/yum.repos.d/google-chrome.repo
-[google-chrome]
-name=google-chrome
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
-enabled=1
-gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
-EOF
-rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
-dnf install -y google-chrome-stable
+# cat << EOF > /etc/yum.repos.d/google-chrome.repo
+# [google-chrome]
+# name=google-chrome
+# baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
+# enabled=1
+# gpgcheck=1
+# gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+# EOF
+# rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+# dnf install -y google-chrome-stable
 
 # Harden sshd options
 echo "" > /etc/ssh/sshd_config
@@ -151,7 +151,7 @@ sudo curl -o /usr/bin/containers.sh https://raw.githubusercontent.com/BarabanovN
 sudo chmod +x /usr/bin/containers.sh
 sudo curl -o /etc/systemd/system/containers.service https://raw.githubusercontent.com/BarabanovNA/kickstart/master/containers.service
 sudo chmod 644 /etc/systemd/system/containers.service
-systemctl enable containers.service
+sudo systemctl enable containers.service
 %end
 
 # Reboot After Installation
