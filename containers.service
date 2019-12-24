@@ -1,6 +1,7 @@
 [Unit]
 Description=start docker's jenkins and gerrit
 Requires=docker.service
+After=docker.service
 
 [Service]
 Type=forked
